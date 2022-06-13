@@ -1,51 +1,49 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Личный сайт Вовы</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
-<body class="dark">
-    <div class="absolute-center">
-        <div class="content">
-            <h1>Ну, здравствуй! 👋</h1>
-            <p>Меня зовут <b>Владимир</b>, мне <span id="age">17</span> и я блогер (и иногда программист) из подмосковья. Так как на сайт мне особо нечего выкладывать, я просто оставлю ссылки на свои социальные сети здесь:</p>
-            <socials>
-                <a class="dark" href="https://youtube.com/veselcraft">
-                    <img src="youtube.svg" width="32">
-                </a>
-                <a class="dark" href="https://t.me/veselcraft">
-                    <img src="telegram.svg" width="32" style="scale: 80%;">
-                </a>
-                <a class="dark" href="https://openvk.su/vc">
-                    <img src="openvk.svg" width="32" style="scale: 120%;">
-                </a>
-                <a class="dark" rel="me" href="https://mastodon.ml/@vladimir">
-                    <img src="mastodon.svg" width="32">
-                </a>
-                <a class="dark" rel="me" href="https://peertube.tv/c/veselcraft">
-                    <img src="peertube.svg" width="32" height="32">
-                </a>
-                <a class="dark" onclick="alert('Мой XMPP: veselcraft@404.city. Мне туда особо не пишут, зато на мобильных устройствах везде включен =)');">
-                    <img src="xmpp.svg" width="32">
-                </a>
-                <a class="dark" href="https://blog.veselcraft.ru/">
-                    <img src="tumblr.png" width="32" height="32" style="object-fit: contain;">
-                </a>
-                <a class="dark" href="https://github.com/veselcraft">
-                    <img src="github.svg" width="32">
-                </a>
-            </socials>
-            <p>Ну и на всякий случай, <a href="vc_pub.gpg">мой GPG-ключ</a></p>
+    <head>
+        <style>
+            /* победа социализму! */
+        </style>
+        <title>veselcraft</title>
+        <meta name="keywords" content="veselcraft, веселкрафт">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="menu">
+            <a href="logo.html" class="menu-logo">
+                <img src="vc logo f b.png" width="60">
+            </a>
+            <a href="javascript:openmenu()" class="menu-icon">
+                <img src="account-box.svg" width="60">
+            </a>
+            <div class="links">
+                <a href="https://youtube.com/veselcraft">YouTube</a>
+                <a href="https://t.me/veselcraft">Telegram</a>
+                <a href="https://openvk.uk/vc">OpenVK</a>
+                <a href="https://mastodon.ml/@veselcraft">Mastodon</a>
+                <a href="https://peertube.tv/c/veselcraft">PeerTube</a>
+                <a href="https://blog.veselcraft.ru">Blog</a>
+            </div>
         </div>
-    </div>
-</body>
-<script>
-    var today = new Date();
-    var bday = new Date('16 June 2004');
-    var years = today - bday;
-    document.getElementById("age").innerHTML = new Date(years).getFullYear() - 1970;
-</script>
+        <div class="content center-this-mf">
+            <iframe width="1139" height="625" src="https://www.youtube.com/embed/UdrRlMZM5qg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </body>
+    <script>
+        function openmenu() {
+            if (document.getElementsByClassName('links')[0].classList.contains('open')) {
+                document.getElementsByClassName('links')[0].classList.remove('open'); 
+            } else {
+                document.getElementsByClassName('links')[0].classList.add('open'); 
+            }
+        }
+
+        var ee = "";
+        document.onkeypress = function(event){
+            ee = ee + event.key;
+            if (ee == "gpg") {
+                window.location.replace("/vc_pub.gpg");
+            }
+        }
+    </script>
 </html>
