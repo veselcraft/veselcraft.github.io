@@ -47,6 +47,10 @@ body {
 .content.center-this-mf {
     justify-content: center;
 }
+
+.content.text {
+    overflow: scroll;
+}
     
 .content iframe {
     width: 75vw;
