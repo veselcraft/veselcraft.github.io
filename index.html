@@ -10,8 +10,8 @@
     </head>
     <body>
         <div class="menu">
-            <a href="logo.html" class="menu-logo">
-                <img src="vc logo f b.png" width="60">
+            <a href="about.html" class="menu-logo">
+                <img src="vc logo f b.png" width="60" alt="About me">
             </a>
             <a href="javascript:openmenu()" class="menu-icon">
                 <img src="account-box.svg" width="60">
@@ -29,21 +29,5 @@
             <iframe width="1139" height="625" src="https://www.youtube.com/embed/PmcV_mQSLrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </body>
-    <script>
-        function openmenu() {
-            if (document.getElementsByClassName('links')[0].classList.contains('open')) {
-                document.getElementsByClassName('links')[0].classList.remove('open'); 
-            } else {
-                document.getElementsByClassName('links')[0].classList.add('open'); 
-            }
-        }
-
-        var ee = "";
-        document.onkeypress = function(event){
-            ee = ee + event.key;
-            if (ee == "gpg") {
-                window.location.replace("/vc_pub.gpg");
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </html>
