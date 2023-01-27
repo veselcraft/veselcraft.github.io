@@ -55,7 +55,7 @@ body {
 .content iframe {
     width: 75vw;
     max-width: 1000px;
-    height: 42vh;
+    height: 70vh;
 }
 
 @media (max-width: 1000px) {
@@ -80,6 +80,12 @@ body {
         right: 0;
         top: 70px;
         border-radius: 15px;
+    }
+
+    .content iframe {
+        width: 100vw;
+        max-width: 1000px;
+        height: 45vh;
     }
 }
 
@@ -117,4 +123,8 @@ body {
         width: 100vw;
         height: 75vh;
     }
+}
+
+a, a:visited {
+    color: rgb(128, 128, 128);
 }
