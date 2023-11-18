@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&family=Inter&display=swap');
 
-body {
-  background-color: black;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
 main {
     max-width: min(1028px, 100%);
     padding: 0px 15px;
@@ -32,8 +23,8 @@ a {
 }
 
 :root {
-    --card-width: 328px;
-    --card-height: 205px;
+	--card-width: 310px;
+	--card-height: 185px;
 }
 
 .cards {
@@ -41,6 +32,7 @@ a {
     gap: 20px;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
